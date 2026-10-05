@@ -1,0 +1,24 @@
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# Streamlit: lokale Einstellungen und Geheimnisse
+.streamlit/secrets.toml
+
+# Editor und Betriebssystem
+.vscode/
+.idea/
+.directory
+.DS_Store
+Thumbs.db
+*~
+
+# Arbeitsdateien, die nicht ins Repo gehören
+*.odt
+*.tmp
