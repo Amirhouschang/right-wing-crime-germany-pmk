@@ -31,7 +31,7 @@ To run it on your own computer, see [How to run](#how-to-run).
 ### 2. Which types of offence make up the total?
 
 - **Six in ten offences are propaganda offences** (59.0 % in 2025), followed by incitement to hatred (13.0 %) and insult (10.1 %). Violent offences are 3.8 %.
-- **All types of offence rose since 2019.** Property damage (+161.2 %) and insult (+142.8 %) grew most in percent.
+- **All types of offence rose since 2019.** Among the six named types, property damage (+161.2 %) and insult (+142.8 %) grew most in percent. The remaining group "other offences" grew by 198.9 %.
 - **More than half of the rise comes from propaganda offences:** 53.7 % of the additional offences between 2019 and 2025.
 
 ![Right-wing motivated offences by type of offence](figures/03_offence_types.png)
@@ -70,7 +70,7 @@ The next chart shows each of the 16 federal states on its own: the AfD share in 
 |---|---|---|
 | Right-wing motivated offences, Germany | BKA and BMI, figures and fact sheets on politically motivated crime; German Bundestag, printed paper 18/5758 | 2014 to 2025 |
 | Right-wing motivated offences, federal states | German Bundestag, printed papers 20/7594, 21/1418 and 21/5639 | 2022 to 2025 |
-| Election results | Federal Returning Officer (Die Bundeswahlleiterin), final results. Licence: Datenlizenz Deutschland – Namensnennung – Version 2.0 | Federal elections 2017, 2021, 2025; European elections 2014, 2019, 2024 |
+| Election results | Federal Returning Officer (Die Bundeswahlleiterin), final results. The files of 2017 to 2025 carry the licence note "Datenlizenz Deutschland – Namensnennung – Version 2.0"; the file of the European election 2014 carries only the copyright note of the Federal Returning Officer | Federal elections 2017, 2021, 2025; European elections 2014, 2019, 2024 |
 | Population | Federal Statistical Office (Destatis), table 12411-0010, reference date 31 December | 2022 to 2025 |
 
 The crime figures are not published in one place and not as tables that can be read by code. They were transcribed by hand from the PDF documents. Every single value has its source, with file name and page, in the column `source` of `data/clean/pmk_rechts_bund.csv` and `data/clean/pmk_rechts_laender.csv`. Nothing was estimated or filled in. The full list of documents is in `notebooks/01_data_preparation.ipynb` (Section 11) and in the dashboard. Data gaps and notes on the data collection are in [`data/README.md`](data/README.md#english).

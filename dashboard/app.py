@@ -122,7 +122,7 @@ TEXT = {
 - **The classification is made by the police of each federal state** on their own responsibility. Differences between the states can reflect differences in recording practice as well as differences in the offences committed.
 - **The figures count offences, not offenders.**
 - **Types of offence are incomplete.** They are missing for 2015 and 2016, insult is a separate category from 2019 only, and coercion and threat is missing for 2020 and 2021.
-- **Figures per federal state are available for 2022 to 2025 only.** The figures of 2022 are given by time of the offence, those of 2023 to 2025 as annual figures with the cut-off date 31 January of the following year.
+- **Figures per federal state are available for 2022 to 2025 only.** The figures of 2022 are given by time of the offence, those of 2024 and 2025 as annual figures with the cut-off date 31 January of the following year. For the figures of 2023 the source (Bundestag printed paper 21/1418) names no cut-off date.
 - **Violent offences per state in 2025 were counted** from the list of single cases in Bundestag printed paper 21/5639.
 - **The figures can still change,** because cases can be reported later. The figures for 2025 are the least settled.
 - **The comparison with election results is descriptive.** It compares 16 federal states, not people, and shows no cause and effect. The grouping into eastern states, city states and western area states was made in this project.
@@ -134,8 +134,10 @@ TEXT = {
                           "answers of the Federal Government to parliamentary questions. The source of every single value, with "
                           "file name and page, is in the column `source` of the table \"Offences, Germany\" below."),
         "sources_crime_cols": ["Used for", "Document", "Pages of the PDF", "File in data/raw"],
-        "sources_elections": ("**Election data.** Published by the Federal Returning Officer (Die Bundeswahlleiterin), Wiesbaden, "
-                              "under the licence \"Datenlizenz Deutschland – Namensnennung – Version 2.0\". Federal elections: second votes."),
+        "sources_elections": ("**Election data.** Published by the Federal Returning Officer (Die Bundeswahlleiterin), Wiesbaden. "
+                              "The files of the elections 2017 to 2025 carry the licence note \"Datenlizenz Deutschland – "
+                              "Namensnennung – Version 2.0\". The file of the European election 2014 carries only the "
+                              "copyright note \"(c) Der Bundeswahlleiter, Wiesbaden 2016\". Federal elections: second votes."),
         "sources_elections_cols": ["Election", "Version", "File in data/raw/wahlen"],
         "sources_rest": ("**Population data.** Federal Statistical Office (Statistisches Bundesamt, Destatis), table 12411-0010 "
                          "\"Bevölkerung: Bundesländer, Stichtag\", reference date 31 December, retrieved on 5 October 2026.\n\n"
@@ -215,7 +217,7 @@ TEXT = {
 - **Die Einstufung nimmt die Polizei des jeweiligen Bundeslandes** in eigener Verantwortung vor. Unterschiede zwischen den Ländern können auf unterschiedliche Erfassung ebenso zurückgehen wie auf Unterschiede bei den begangenen Straftaten.
 - **Gezählt werden Straftaten, nicht Täter.**
 - **Die Deliktarten sind unvollständig.** Sie fehlen für 2015 und 2016, Beleidigung ist erst ab 2019 eine eigene Kategorie, und Nötigung/Bedrohung fehlt für 2020 und 2021.
-- **Zahlen je Bundesland gibt es nur für 2022 bis 2025.** Die Zahlen für 2022 sind nach Tatzeit angegeben, die für 2023 bis 2025 als Jahresfallzahlen mit Stichtag 31. Januar des Folgejahres.
+- **Zahlen je Bundesland gibt es nur für 2022 bis 2025.** Die Zahlen für 2022 sind nach Tatzeit angegeben, die für 2024 und 2025 als Jahresfallzahlen mit Stichtag 31. Januar des Folgejahres. Für die Zahlen für 2023 nennt die Quelle (Bundestagsdrucksache 21/1418) keinen Stichtag.
 - **Die Gewaltdelikte je Land für 2025 wurden gezählt,** aus der Liste der Einzelfälle in Bundestagsdrucksache 21/5639.
 - **Die Zahlen können sich noch ändern,** weil Fälle nachgemeldet werden. Die Zahlen für 2025 sind am wenigsten gefestigt.
 - **Der Vergleich mit Wahlergebnissen ist beschreibend.** Er vergleicht 16 Bundesländer, nicht Menschen, und zeigt keinen ursächlichen Zusammenhang. Die Einteilung in östliche Länder, Stadtstaaten und westliche Flächenländer stammt aus diesem Projekt.
@@ -227,8 +229,10 @@ TEXT = {
                           "jedes einzelnen Wertes, mit Dateiname und Seite, steht in der Spalte `source` der Tabelle "
                           "„Straftaten, Deutschland\" weiter unten."),
         "sources_crime_cols": ["Verwendet für", "Dokument", "Seiten der PDF", "Datei in data/raw"],
-        "sources_elections": ("**Wahldaten.** Veröffentlicht von der Bundeswahlleiterin, Wiesbaden, unter der Lizenz "
-                              "„Datenlizenz Deutschland – Namensnennung – Version 2.0\". Bundestagswahlen: Zweitstimmen."),
+        "sources_elections": ("**Wahldaten.** Veröffentlicht von der Bundeswahlleiterin, Wiesbaden. "
+                              "Die Dateien der Wahlen 2017 bis 2025 tragen den Lizenzhinweis „Datenlizenz Deutschland – "
+                              "Namensnennung – Version 2.0\". Die Datei der Europawahl 2014 trägt nur den "
+                              "Urheberhinweis „(c) Der Bundeswahlleiter, Wiesbaden 2016\". Bundestagswahlen: Zweitstimmen."),
         "sources_elections_cols": ["Wahl", "Stand", "Datei in data/raw/wahlen"],
         "sources_rest": ("**Bevölkerungsdaten.** Statistisches Bundesamt (Destatis), Tabelle 12411-0010 "
                          "„Bevölkerung: Bundesländer, Stichtag\", Stichtag 31. Dezember, abgerufen am 5. Oktober 2026.\n\n"

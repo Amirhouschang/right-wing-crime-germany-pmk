@@ -33,7 +33,7 @@ Die Grafiken stammen aus dem Analyse-Notebook und sind englisch beschriftet. Im 
 ### 2. Aus welchen Deliktarten setzt sich die Gesamtzahl zusammen?
 
 - **Sechs von zehn Straftaten sind Propagandadelikte** (59,0 % im Jahr 2025), gefolgt von Volksverhetzung (13,0 %) und Beleidigung (10,1 %). Gewaltdelikte machen 3,8 % aus.
-- **Seit 2019 sind alle Deliktarten gestiegen.** Sachbeschädigung (+161,2 %) und Beleidigung (+142,8 %) sind prozentual am stärksten gewachsen.
+- **Seit 2019 sind alle Deliktarten gestiegen.** Unter den sechs genannten Deliktarten sind Sachbeschädigung (+161,2 %) und Beleidigung (+142,8 %) prozentual am stärksten gewachsen. Die Restgruppe „Sonstige Straftaten" wuchs um 198,9 %.
 - **Mehr als die Hälfte des Anstiegs entfällt auf Propagandadelikte:** 53,7 % der zusätzlichen Straftaten zwischen 2019 und 2025.
 
 ![Rechts motivierte Straftaten nach Deliktart](figures/03_offence_types.png)
@@ -72,7 +72,7 @@ Die nächste Grafik zeigt jedes der 16 Bundesländer einzeln: den AfD-Anteil bei
 |---|---|---|
 | Rechts motivierte Straftaten, Deutschland | BKA und BMI, Fallzahlen und Factsheets zur politisch motivierten Kriminalität; Deutscher Bundestag, Drucksache 18/5758 | 2014 bis 2025 |
 | Rechts motivierte Straftaten, Bundesländer | Deutscher Bundestag, Drucksachen 20/7594, 21/1418 und 21/5639 | 2022 bis 2025 |
-| Wahlergebnisse | Die Bundeswahlleiterin, endgültige Ergebnisse. Lizenz: Datenlizenz Deutschland – Namensnennung – Version 2.0 | Bundestagswahlen 2017, 2021, 2025; Europawahlen 2014, 2019, 2024 |
+| Wahlergebnisse | Die Bundeswahlleiterin, endgültige Ergebnisse. Die Dateien von 2017 bis 2025 tragen den Lizenzhinweis „Datenlizenz Deutschland – Namensnennung – Version 2.0"; die Datei der Europawahl 2014 trägt nur den Urheberhinweis des Bundeswahlleiters | Bundestagswahlen 2017, 2021, 2025; Europawahlen 2014, 2019, 2024 |
 | Bevölkerung | Statistisches Bundesamt (Destatis), Tabelle 12411-0010, Stichtag 31. Dezember | 2022 bis 2025 |
 
 Die Kriminalitätszahlen sind nicht an einer Stelle veröffentlicht und nicht als Tabellen, die sich per Code lesen lassen. Sie wurden von Hand aus den PDF-Dokumenten übertragen. Jeder einzelne Wert hat seine Quelle, mit Dateiname und Seite, in der Spalte `source` von `data/clean/pmk_rechts_bund.csv` und `data/clean/pmk_rechts_laender.csv`. Nichts wurde geschätzt oder ergänzt. Die vollständige Liste der Dokumente steht in `notebooks/01_data_preparation.ipynb` (Abschnitt 11) und im Dashboard. Datenlücken und Hinweise zur Datensammlung stehen in [`data/README.md`](data/README.md#deutsch).

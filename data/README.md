@@ -38,7 +38,7 @@
 - **European election 2014** has an older table format (`ew2014_kerg.csv`, Latin-1, header in two rows) and no percentages. The AfD share is calculated as votes divided by valid votes.
 - **Federal election 2021:** original result of 26 September 2021, without the repeat election in parts of Berlin in 2024.
 - **Rates per 100,000 inhabitants** are own calculations: offences ÷ inhabitants × 100,000. Population from table 12411-0010 (31 December), from 2022 based on the census of 2022. The rates printed in the Bundestag papers are not used.
-- **State figures of 2022** are given by time of the offence (paper 20/7594). **2023 to 2025** are annual figures with the cut-off date 31 January of the following year. Whether both methods are fully comparable was not verified.
+- **State figures of 2022** are given by time of the offence (paper 20/7594). **2024 and 2025** are annual figures with the cut-off date 31 January of the following year (papers 21/1418 and 21/5639). For **2023** paper 21/1418 names no cut-off date. Whether these methods are fully comparable was not verified.
 - **Violent offences per state in 2025** were counted from the list of single cases in paper 21/5639 (marked `gezaehlt` in `pmk_rechts_laender.csv`).
 - The statistics count cases when the police report them; cases can be reported later. The figures for 2025 may still change.
 - Right-wing motivated = classification of the police (PMK -rechts-).
@@ -80,7 +80,7 @@
 - **Europawahl 2014** hat ein älteres Tabellenformat (`ew2014_kerg.csv`, Latin-1, Kopfzeile über zwei Zeilen) und keine Prozentwerte. Der AfD-Anteil ist berechnet als Stimmen geteilt durch gültige Stimmen.
 - **Bundestagswahl 2021:** ursprüngliches Ergebnis vom 26. September 2021, ohne die Wiederholungswahl in Teilen Berlins 2024.
 - **Raten je 100.000 Einwohner** sind eigene Berechnungen: Straftaten ÷ Einwohner × 100.000. Einwohner aus Tabelle 12411-0010 (31. Dezember), ab 2022 auf Basis des Zensus 2022. Die in den Drucksachen abgedruckten Raten werden nicht verwendet.
-- **Länderzahlen 2022** sind nach Tatzeit angegeben (Drucksache 20/7594). **2023 bis 2025** sind Jahresfallzahlen mit Stichtag 31. Januar des Folgejahres. Ob beide Zählweisen voll vergleichbar sind, wurde nicht geprüft.
+- **Länderzahlen 2022** sind nach Tatzeit angegeben (Drucksache 20/7594). **2024 und 2025** sind Jahresfallzahlen mit Stichtag 31. Januar des Folgejahres (Drucksachen 21/1418 und 21/5639). Für **2023** nennt Drucksache 21/1418 keinen Stichtag. Ob diese Zählweisen voll vergleichbar sind, wurde nicht geprüft.
 - **Gewaltdelikte je Land 2025** wurden aus der Liste der Einzelfälle in Drucksache 21/5639 gezählt (in `pmk_rechts_laender.csv` mit `gezaehlt` markiert).
 - Die Statistik zählt Fälle bei Meldung durch die Polizei; Fälle können nachgemeldet werden. Die Zahlen für 2025 können sich noch ändern.
 - Rechts motiviert = Einstufung der Polizei (PMK -rechts-).
