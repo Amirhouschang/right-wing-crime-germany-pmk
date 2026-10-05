@@ -10,8 +10,9 @@ Was als rechts motiviert gilt, legt dieses Projekt nicht selbst fest. Es gilt di
 
 ## Interaktives Dashboard
 
-<!-- Link nach der Veröffentlichung auf Streamlit Community Cloud eintragen -->
-**Dashboard:** Link folgt. Das Dashboard gibt es auf Deutsch und Englisch.
+**Dashboard:** [https://right-wing-crime-germany-pmk.streamlit.app/](https://right-wing-crime-germany-pmk.streamlit.app/)
+
+Das Dashboard gibt es auf Deutsch und Englisch. Die Sprache lässt sich oben auf der Seite umschalten.
 
 Wie man es auf dem eigenen Rechner startet, steht unter [Ausführen](#ausführen).
 
@@ -58,6 +59,10 @@ Die Grafiken stammen aus dem Analyse-Notebook und sind englisch beschriftet. Im 
 ![AfD-Stimmenanteil und Straftaten nach Bundesland, 2025](figures/08_afd_and_offences_states.png)
 
 ![Rechts motivierte Straftaten und AfD-Wahlergebnisse in Deutschland, 2014 bis 2025](figures/07_offences_and_afd_over_time.png)
+
+Die nächste Grafik zeigt jedes der 16 Bundesländer einzeln: den AfD-Anteil bei allen sechs Wahlen als Linie und die Straftatenrate von 2022 bis 2025 als Balken. Alle Felder haben dieselben Skalen. Der AfD-Anteil war 2025 in allen 16 Ländern höher als 2021, und die Straftatenrate war 2025 in allen 16 Ländern höher als 2022.
+
+![AfD-Stimmenanteil und rechts motivierte Straftaten in jedem Bundesland](figures/09_afd_and_offences_each_state.png)
 
 **Was dieser Vergleich zeigt und was nicht.** Er ist beschreibend. Er vergleicht 16 Bundesländer, nicht Menschen. Er sagt nicht, wer Straftaten begeht oder wer welche Partei wählt, und er zeigt keinen ursächlichen Zusammenhang. Die Länder unterscheiden sich in vielem anderen, unter anderem in der Erfassungspraxis der Polizei.
 

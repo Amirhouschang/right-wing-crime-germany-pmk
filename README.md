@@ -10,8 +10,9 @@ Which offences count as right-wing motivated is not defined in this project. The
 
 ## Interactive dashboard
 
-<!-- Add the link after publishing the app on Streamlit Community Cloud -->
-**Dashboard:** link follows. The dashboard is available in German and English.
+**Dashboard:** [https://right-wing-crime-germany-pmk.streamlit.app/](https://right-wing-crime-germany-pmk.streamlit.app/)
+
+The dashboard is available in German and English. The language can be switched at the top of the page.
 
 To run it on your own computer, see [How to run](#how-to-run).
 
@@ -56,6 +57,10 @@ To run it on your own computer, see [How to run](#how-to-run).
 ![AfD share of votes and offences by federal state, 2025](figures/08_afd_and_offences_states.png)
 
 ![Right-wing motivated offences and AfD election results in Germany, 2014 to 2025](figures/07_offences_and_afd_over_time.png)
+
+The next chart shows each of the 16 federal states on its own: the AfD share in all six elections as a line and the offence rate from 2022 to 2025 as bars. All panels use the same scales. The AfD share was higher in 2025 than in 2021 in all 16 states, and the offence rate was higher in 2025 than in 2022 in all 16 states.
+
+![AfD share of votes and right-wing motivated offences in each federal state](figures/09_afd_and_offences_each_state.png)
 
 **What this comparison does and does not show.** It is descriptive. It compares 16 federal states, not people. It does not say who commits offences or who votes for which party, and it shows no cause and effect. Many other things differ between the states, among them the recording practice of the police.
 

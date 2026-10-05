@@ -80,6 +80,8 @@ TEXT = {
         "view_number": "Number of offences", "view_share": "Share in %", "axis_share": "Share in %",
         "types_note": ("Only years with all six types of offence are shown: {years}. "
                        "Other offences = total minus the six types (own calculation). "),
+        "share_note": ("The shares of one year add up to 100 %. The lines show how the share of each type "
+                       "changed, not how many offences there were."),
         "types_table": "Table: offences by type and year",
         "groups_filter": "Groups of states", "choose_group": "Choose at least one group of states.",
         "tile_germany": "Germany {year}, per 100,000 inhabitants", "tile_highest": "Highest", "tile_lowest": "Lowest",
@@ -169,6 +171,8 @@ TEXT = {
         "view_number": "Anzahl der Straftaten", "view_share": "Anteil in %", "axis_share": "Anteil in %",
         "types_note": ("Gezeigt werden nur Jahre, in denen alle sechs Deliktarten vorliegen: {years}. "
                        "Sonstige Straftaten = Gesamtzahl minus die sechs Deliktarten (eigene Berechnung). "),
+        "share_note": ("Die Anteile eines Jahres ergeben zusammen 100 %. Die Linien zeigen, wie sich der Anteil "
+                       "jeder Deliktart verändert hat, nicht wie viele Straftaten es waren."),
         "types_table": "Tabelle: Straftaten nach Deliktart und Jahr",
         "groups_filter": "Ländergruppen", "choose_group": "Bitte mindestens eine Ländergruppe wählen.",
         "tile_germany": "Deutschland {year}, je 100.000 Einwohner", "tile_highest": "Höchster Wert", "tile_lowest": "Niedrigster Wert",
@@ -421,19 +425,28 @@ with tab_germany:
     value_format = "%{y:.1f} %" if as_share else "%{y:,.0f}"
 
     fig = go.Figure()
-    for column, color in zip(types.columns, TYPE_COLORS):
-        fig.add_bar(x=years_text, y=shown[column], name=T["types"][column], marker_color=color,
-                    marker_line=dict(color="white", width=1.5),
-                    hovertemplate=f"{T['types'][column]}: {value_format}<extra></extra>")
-    # Invisible trace: adds the total of the year to the hover box
-    fig.add_scatter(x=years_text, y=shown.sum(axis=1), mode="markers", marker=dict(opacity=0), showlegend=False,
-                    name=T["types"]["total"],
-                    hovertemplate=f"<b>{T['types']['total']}: {value_format}</b><extra></extra>")
-    # hovermode "x unified": one box with all types of the year, not only the segment under the mouse
-    show(base_layout(fig, height=460, barmode="stack", hovermode="x unified",
-                     xaxis=dict(type="category"),
-                     yaxis=dict(title=T["axis_share"] if as_share else T["axis_offences"],
-                                tickformat="" if as_share else ",")))
+    if as_share:
+        # Shares always add up to 100 %, so stacked bars would all have the same height.
+        # One line per type shows instead how the share of each type changed.
+        for column, color in zip(types.columns, TYPE_COLORS):
+            fig.add_scatter(x=years_text, y=shown[column], name=T["types"][column], mode="lines+markers",
+                            line=dict(color=color, width=2), marker=dict(size=8),
+                            hovertemplate=f"{T['types'][column]}: {value_format}<extra></extra>")
+        show(base_layout(fig, height=460, hovermode="x unified", xaxis=dict(type="category"),
+                         yaxis=dict(title=T["axis_share"], range=[0, 70])))
+        st.caption(T["share_note"])
+    else:
+        for column, color in zip(types.columns, TYPE_COLORS):
+            fig.add_bar(x=years_text, y=shown[column], name=T["types"][column], marker_color=color,
+                        marker_line=dict(color="white", width=1.5),
+                        hovertemplate=f"{T['types'][column]}: {value_format}<extra></extra>")
+        # Invisible trace: adds the total of the year to the hover box
+        fig.add_scatter(x=years_text, y=shown.sum(axis=1), mode="markers", marker=dict(opacity=0), showlegend=False,
+                        name=T["types"]["total"],
+                        hovertemplate=f"<b>{T['types']['total']}: {value_format}</b><extra></extra>")
+        # hovermode "x unified": one box with all types of the year, not only the segment under the mouse
+        show(base_layout(fig, height=460, barmode="stack", hovermode="x unified", xaxis=dict(type="category"),
+                         yaxis=dict(title=T["axis_offences"], tickformat=",")))
     st.caption(T["types_note"].format(years=", ".join(years_text)) + T["source_federal"])
     with st.expander(T["types_table"]):
         full_width(st.dataframe, federal.rename(columns=T["types"]).rename_axis(T["year"]))
