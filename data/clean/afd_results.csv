@@ -1,0 +1,103 @@
+election,year,state,afd_votes,afd_share_pct
+european,2014,Baden-Württemberg,309500,7.88
+european,2014,Bavaria,311982,8.06
+european,2014,Berlin,91759,7.91
+european,2014,Brandenburg,79371,8.49
+european,2014,Bremen,11205,5.79
+european,2014,Germany,2070014,7.05
+european,2014,Hamburg,33239,6.01
+european,2014,Hesse,168506,9.14
+european,2014,Lower Saxony,160342,5.38
+european,2014,Mecklenburg-Western Pomerania,42548,7.0
+european,2014,North Rhine-Westphalia,369724,5.4
+european,2014,Rhineland-Palatinate,114602,6.66
+european,2014,Saarland,28248,6.8
+european,2014,Saxony,164263,10.13
+european,2014,Saxony-Anhalt,50605,6.34
+european,2014,Schleswig-Holstein,66109,6.81
+european,2014,Thuringia,68011,7.44
+federal,2017,Baden-Württemberg,730499,12.19
+federal,2017,Bavaria,916300,12.39
+federal,2017,Berlin,225170,12.05
+federal,2017,Brandenburg,301103,20.2
+federal,2017,Bremen,33244,10.0
+federal,2017,Germany,5878115,12.64
+federal,2017,Hamburg,76511,7.82
+federal,2017,Hesse,398712,11.91
+federal,2017,Lower Saxony,422362,9.09
+federal,2017,Mecklenburg-Western Pomerania,172409,18.59
+federal,2017,North Rhine-Westphalia,928425,9.42
+federal,2017,Rhineland-Palatinate,265688,11.25
+federal,2017,Saarland,58920,10.07
+federal,2017,Saxony,669940,27.02
+federal,2017,Saxony-Anhalt,244401,19.63
+federal,2017,Schleswig-Holstein,140362,8.18
+federal,2017,Thuringia,294069,22.72
+european,2019,Baden-Württemberg,487436,10.0
+european,2019,Bavaria,492443,8.51
+european,2019,Berlin,149177,9.9
+european,2019,Brandenburg,238417,19.91
+european,2019,Bremen,22450,7.68
+european,2019,Germany,4104453,10.98
+european,2019,Hamburg,51649,6.49
+european,2019,Hesse,252794,9.9
+european,2019,Lower Saxony,297385,7.95
+european,2019,Mecklenburg-Western Pomerania,133205,17.68
+european,2019,North Rhine-Westphalia,682400,8.52
+european,2019,Rhineland-Palatinate,192851,9.85
+european,2019,Saarland,48057,9.64
+european,2019,Saxony,520668,25.28
+european,2019,Saxony-Anhalt,198684,20.37
+european,2019,Schleswig-Holstein,100258,7.45
+european,2019,Thuringia,236579,22.53
+federal,2021,Baden-Württemberg,571336,9.6
+federal,2021,Bavaria,679915,8.98
+federal,2021,Berlin,153694,8.41
+federal,2021,Brandenburg,277412,18.14
+federal,2021,Bremen,22575,6.88
+federal,2021,Germany,4803902,10.34
+federal,2021,Hamburg,50537,5.03
+federal,2021,Hesse,290978,8.82
+federal,2021,Lower Saxony,336434,7.44
+federal,2021,Mecklenburg-Western Pomerania,165342,17.99
+federal,2021,North Rhine-Westphalia,717510,7.26
+federal,2021,Rhineland-Palatinate,215205,9.22
+federal,2021,Saarland,57629,10.05
+federal,2021,Saxony,607044,24.65
+federal,2021,Saxony-Anhalt,235492,19.59
+federal,2021,Schleswig-Holstein,119566,6.78
+federal,2021,Thuringia,303233,23.97
+european,2024,Baden-Württemberg,757992,14.73
+european,2024,Bavaria,799060,12.64
+european,2024,Berlin,179303,11.6
+european,2024,Brandenburg,380717,27.52
+european,2024,Bremen,26804,10.23
+european,2024,Germany,6325890,15.89
+european,2024,Hamburg,69318,8.01
+european,2024,Hesse,378892,13.61
+european,2024,Lower Saxony,523014,13.24
+european,2024,Mecklenburg-Western Pomerania,241896,28.34
+european,2024,North Rhine-Westphalia,1049639,12.62
+european,2024,Rhineland-Palatinate,297680,14.67
+european,2024,Saarland,79067,15.69
+european,2024,Saxony,710025,31.77
+european,2024,Saxony-Anhalt,331951,30.52
+european,2024,Schleswig-Holstein,180498,12.18
+european,2024,Thuringia,320034,30.74
+federal,2025,Baden-Württemberg,1256430,19.79
+federal,2025,Bavaria,1515731,19.01
+federal,2025,Berlin,296990,15.23
+federal,2025,Brandenburg,535275,32.49
+federal,2025,Bremen,52496,15.07
+federal,2025,Germany,10328780,20.8
+federal,2025,Hamburg,113608,10.87
+federal,2025,Hesse,636778,17.78
+federal,2025,Lower Saxony,894540,17.84
+federal,2025,Mecklenburg-Western Pomerania,357361,34.99
+federal,2025,North Rhine-Westphalia,1770379,16.82
+federal,2025,Rhineland-Palatinate,498695,20.09
+federal,2025,Saarland,129294,21.56
+federal,2025,Saxony,958401,37.3
+federal,2025,Saxony-Anhalt,496110,37.1
+federal,2025,Schleswig-Holstein,306165,16.29
+federal,2025,Thuringia,510527,38.55
