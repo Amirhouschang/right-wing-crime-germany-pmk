@@ -12,6 +12,7 @@ from pathlib import Path
 
 import pandas as pd
 import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 import streamlit as st
 
 # ---------------------------------------------------------------------------
@@ -80,8 +81,9 @@ TEXT = {
         "view_number": "Number of offences", "view_share": "Share in %", "axis_share": "Share in %",
         "types_note": ("Only years with all six types of offence are shown: {years}. "
                        "Other offences = total minus the six types (own calculation). "),
-        "share_note": ("The shares of one year add up to 100 %. The lines show how the share of each type "
-                       "changed, not how many offences there were."),
+        "share_note": ("Share of each type of offence in all right-wing motivated offences of the year, in %. "
+                       "Each chart has its own scale, so that small types can be read as well. "
+                       "The shares of one year add up to 100 %."),
         "types_table": "Table: offences by type and year",
         "groups_filter": "Groups of states", "choose_group": "Choose at least one group of states.",
         "tile_germany": "Germany {year}, per 100,000 inhabitants", "tile_highest": "Highest", "tile_lowest": "Lowest",
@@ -171,8 +173,9 @@ TEXT = {
         "view_number": "Anzahl der Straftaten", "view_share": "Anteil in %", "axis_share": "Anteil in %",
         "types_note": ("Gezeigt werden nur Jahre, in denen alle sechs Deliktarten vorliegen: {years}. "
                        "Sonstige Straftaten = Gesamtzahl minus die sechs Deliktarten (eigene Berechnung). "),
-        "share_note": ("Die Anteile eines Jahres ergeben zusammen 100 %. Die Linien zeigen, wie sich der Anteil "
-                       "jeder Deliktart verändert hat, nicht wie viele Straftaten es waren."),
+        "share_note": ("Anteil jeder Deliktart an allen rechts motivierten Straftaten des Jahres, in %. "
+                       "Jede Grafik hat ihre eigene Skala, damit auch kleine Deliktarten lesbar sind. "
+                       "Die Anteile eines Jahres ergeben zusammen 100 %."),
         "types_table": "Tabelle: Straftaten nach Deliktart und Jahr",
         "groups_filter": "Ländergruppen", "choose_group": "Bitte mindestens eine Ländergruppe wählen.",
         "tile_germany": "Deutschland {year}, je 100.000 Einwohner", "tile_highest": "Höchster Wert", "tile_lowest": "Niedrigster Wert",
@@ -426,14 +429,26 @@ with tab_germany:
 
     fig = go.Figure()
     if as_share:
-        # Shares always add up to 100 %, so stacked bars would all have the same height.
-        # One line per type shows instead how the share of each type changed.
-        for column, color in zip(types.columns, TYPE_COLORS):
-            fig.add_scatter(x=years_text, y=shown[column], name=T["types"][column], mode="lines+markers",
-                            line=dict(color=color, width=2), marker=dict(size=8),
-                            hovertemplate=f"{T['types'][column]}: {value_format}<extra></extra>")
-        show(base_layout(fig, height=460, hovermode="x unified", xaxis=dict(type="category"),
-                         yaxis=dict(title=T["axis_share"], range=[0, 70])))
+        # Shares always add up to 100 %, so stacked bars would all have the same height, and in one
+        # shared chart the small types disappear next to the propaganda offences. Therefore one small
+        # chart per type, each with its own scale, so that the change of every type can be read.
+        fig = make_subplots(rows=2, cols=4, subplot_titles=[T["types"][c] for c in types.columns],
+                            horizontal_spacing=0.06, vertical_spacing=0.2)
+        for k, (column, color) in enumerate(zip(types.columns, TYPE_COLORS)):
+            row, col = k // 4 + 1, k % 4 + 1
+            fig.add_scatter(x=years_text, y=shown[column], mode="lines+markers+text", showlegend=False,
+                            line=dict(color=color, width=2.5), marker=dict(size=9),
+                            text=[num(v, 1) for v in shown[column]], textposition="top center",
+                            textfont=dict(size=11, color=INK), cliponaxis=False,
+                            hovertemplate=f"{T['types'][column]}, %{{x}}: {value_format}<extra></extra>",
+                            row=row, col=col)
+            fig.update_yaxes(range=[0, 1.3 * shown[column].max()], row=row, col=col)
+        fig = base_layout(fig, height=520)
+        fig.update_layout(margin=dict(t=50))
+        fig.update_xaxes(type="category", tickfont=dict(size=11))
+        fig.update_yaxes(ticksuffix=" %", tickfont=dict(size=11), nticks=5)
+        fig.update_annotations(font=dict(size=13, color=INK))
+        show(fig)
         st.caption(T["share_note"])
     else:
         for column, color in zip(types.columns, TYPE_COLORS):
