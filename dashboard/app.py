@@ -48,7 +48,8 @@ GROUP_COLORS = {"east": ORANGE, "city": GREEN, "west": BLUE}
 TYPE_COLORS = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#4a3aa7", "#b5b5b5"]
 INK, GRID = "#333333", "#e5e5e5"
 
-MEASURES = {"all": ("total", "total_per_100k", 1), "violent": ("violent", "violent_per_100k", 2)}
+# Measure: column with the number of offences, column with the unrounded rate, decimals shown
+MEASURES = {"all": ("total", "total_rate", 1), "violent": ("violent", "violent_rate", 2)}
 ELECTION_PAIRS = {"federal_2025": ("federal", 2025), "european_2024": ("european", 2024)}
 
 # ---------------------------------------------------------------------------
@@ -278,6 +279,10 @@ def load_data():
     states = pd.read_csv(DATA_CLEAN / "pmk_right_states.csv")
     afd = pd.read_csv(DATA_CLEAN / "afd_results.csv")
     states["group"] = states["state"].map(GROUP_OF_STATE)
+    # Unrounded rates for all calculations (highest divided by lowest, correlations, order of the states).
+    # The rounded columns total_per_100k and violent_per_100k of the table are used for display only.
+    states["total_rate"] = 100_000 * states["total"] / states["population"]
+    states["violent_rate"] = 100_000 * states["violent"] / states["population"]
     federal = federal_long.pivot(index="year", columns="offence", values="cases")[["total"] + OFFENCE_TYPES]
     return federal_long, federal, states, afd
 
@@ -670,7 +675,7 @@ with tab_data:
     st.markdown(T["sources_rest"])
 
     st.subheader(T["data_title"])
-    files = [(federal_long, "pmk_right_federal.csv"), (states.drop(columns="group"), "pmk_right_states.csv"),
+    files = [(federal_long, "pmk_right_federal.csv"), (states.drop(columns=["group", "total_rate", "violent_rate"]), "pmk_right_states.csv"),
              (afd, "afd_results.csv")]
     for title, (table, file_name) in zip(T["data_tables"], files):
         with st.expander(title):

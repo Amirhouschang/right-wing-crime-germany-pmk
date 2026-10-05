@@ -41,7 +41,7 @@ Die Grafiken stammen aus dem Analyse-Notebook und sind englisch beschriftet. Im 
 ### 3. Wie unterscheiden sich die 16 Bundesländer?
 
 - **Die Bundesländer unterscheiden sich um den Faktor 5,3.** 2025 verzeichnete Mecklenburg-Vorpommern 145,0 Straftaten je 100.000 Einwohner, Baden-Württemberg 27,6. Der Wert für Deutschland liegt bei 51,0.
-- **Die Rate stieg von 2022 bis 2025 in allen 16 Ländern,** zwischen +35,3 % in Berlin und +190,7 % in Hamburg.
+- **Die Rate stieg von 2022 bis 2025 in allen 16 Ländern,** zwischen +35,5 % in Berlin und +190,5 % in Hamburg.
 - **Die Länder bilden drei Gruppen.** 2025 verzeichneten die fünf östlichen Länder 118,7 Straftaten je 100.000 Einwohner, die drei Stadtstaaten 81,2 und die acht westlichen Flächenländer 35,1.
 - **Die östlichen Länder haben 14,8 % der Bevölkerung und 34,5 % der Straftaten.**
 
@@ -52,7 +52,7 @@ Die Grafiken stammen aus dem Analyse-Notebook und sind englisch beschriftet. Im 
 ### 4. Wie verhalten sich die AfD-Wahlergebnisse zu den Straftatenraten?
 
 - **Über alle 16 Länder hängen die beiden Werte zusammen** (Korrelation 0,72 für die Bundestagswahl 2025).
-- **Innerhalb der Gruppen nicht:** −0,53 unter den fünf östlichen Ländern und 0,08 unter den acht westlichen Flächenländern. Der Gesamtwert spiegelt den Unterschied zwischen den Gruppen.
+- **Innerhalb der Gruppen nicht:** −0,52 unter den fünf östlichen Ländern und 0,08 unter den acht westlichen Flächenländern. Der Gesamtwert spiegelt den Unterschied zwischen den Gruppen.
 - **Die Stadtstaaten passen nicht ins Gesamtbild.** Sie haben die niedrigsten AfD-Anteile (10,9 % bis 15,2 %) und mehr als doppelt so hohe Straftatenraten wie die westlichen Flächenländer.
 - **Für Deutschland insgesamt sind beide Werte gestiegen,** aber nicht im Gleichschritt: Zwischen den Bundestagswahlen 2017 und 2021 sank der AfD-Anteil, während die Straftaten stiegen.
 
@@ -81,7 +81,9 @@ Die Kriminalitätszahlen sind nicht an einer Stelle veröffentlicht und nicht al
 
 ```
 right-wing-crime-germany-pmk/
+├── .devcontainer/                Einstellungen für GitHub Codespaces
 ├── data/
+│   ├── README.md                 Datenlücken und Hinweise zu den Daten
 │   ├── raw/                      Originaldateien wie veröffentlicht
 │   │   ├── pmk_bund/             Berichte von BKA und BMI, Drucksache 18/5758
 │   │   ├── pmk_laender/          Drucksachen mit Zahlen je Bundesland

@@ -39,7 +39,7 @@ To run it on your own computer, see [How to run](#how-to-run).
 ### 3. How do the 16 federal states differ?
 
 - **The federal states differ by a factor of 5.3.** In 2025 Mecklenburg-Western Pomerania recorded 145.0 offences per 100,000 inhabitants, Baden-Württemberg 27.6. The figure for Germany is 51.0.
-- **The rate rose in all 16 states from 2022 to 2025,** between +35.3 % in Berlin and +190.7 % in Hamburg.
+- **The rate rose in all 16 states from 2022 to 2025,** between +35.5 % in Berlin and +190.5 % in Hamburg.
 - **The states form three groups.** In 2025 the five eastern states recorded 118.7 offences per 100,000 inhabitants, the three city states 81.2 and the eight western area states 35.1.
 - **The eastern states have 14.8 % of the population and 34.5 % of the offences.**
 
@@ -50,7 +50,7 @@ To run it on your own computer, see [How to run](#how-to-run).
 ### 4. How do the AfD election results compare with the offence rates?
 
 - **Across the 16 states the two figures move together** (correlation 0.72 for the federal election of 2025).
-- **Within the groups they do not:** −0.53 among the five eastern states and 0.08 among the eight western area states. The overall figure reflects the difference between the groups.
+- **Within the groups they do not:** −0.52 among the five eastern states and 0.08 among the eight western area states. The overall figure reflects the difference between the groups.
 - **The city states do not fit the overall pattern.** They have the lowest AfD shares (10.9 % to 15.2 %) and offence rates more than twice as high as the western area states.
 - **For Germany as a whole both figures rose,** but not in step: between the federal elections of 2017 and 2021 the AfD share fell while the offences rose.
 
@@ -79,7 +79,9 @@ The crime figures are not published in one place and not as tables that can be r
 
 ```
 right-wing-crime-germany-pmk/
+├── .devcontainer/                settings for GitHub Codespaces
 ├── data/
+│   ├── README.md                 data gaps and notes on the data
 │   ├── raw/                      original files as published
 │   │   ├── pmk_bund/             reports of BKA and BMI, Bundestag paper 18/5758
 │   │   ├── pmk_laender/          Bundestag papers with figures per federal state
