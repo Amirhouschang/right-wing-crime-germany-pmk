@@ -102,7 +102,8 @@ TEXT = {
         "states_scatter": "Federal states: AfD share and offence rate", "pair_filter": "Election and year of the offences",
         "corr_all": "Correlation, all 16 states", "corr_east": "Within the 5 eastern states",
         "corr_west": "Within the 8 western area states",
-        "corr_note": ("Correlation coefficient: +1 means the same order of the states, 0 no relation, −1 the opposite order. "
+        "corr_note": ("Correlation coefficient (Pearson): it measures only straight-line relations. +1 means all states lie on a "
+                      "rising straight line, 0 no linear relation, −1 a falling straight line. "
                       "For the three city states no coefficient is given, three values do not carry one. "
                       "With five and eight states the coefficients within the groups are not reliable on their own."),
         "axis_afd_pair": "AfD share of votes, {election} {year}, in %", "axis_rate_pair": "{measure} per 100,000 inhabitants, {year}",
@@ -194,8 +195,9 @@ TEXT = {
         "states_scatter": "Bundesländer: AfD-Anteil und Straftatenrate", "pair_filter": "Wahl und Jahr der Straftaten",
         "corr_all": "Korrelation, alle 16 Länder", "corr_east": "Innerhalb der 5 östlichen Länder",
         "corr_west": "Innerhalb der 8 westlichen Flächenländer",
-        "corr_note": ("Korrelationskoeffizient: +1 bedeutet dieselbe Reihenfolge der Länder, 0 keinen Zusammenhang, −1 die "
-                      "umgekehrte Reihenfolge. Für die drei Stadtstaaten wird kein Wert angegeben, drei Werte tragen keinen. "
+        "corr_note": ("Korrelationskoeffizient (Pearson): Er misst nur lineare Zusammenhänge. +1 bedeutet, dass alle Länder auf "
+                      "einer steigenden Geraden liegen, 0 keinen linearen Zusammenhang, −1 eine fallende Gerade. "
+                      "Für die drei Stadtstaaten wird kein Wert angegeben, drei Werte tragen keinen. "
                       "Bei fünf und acht Ländern sind die Werte innerhalb der Gruppen für sich allein nicht belastbar."),
         "axis_afd_pair": "AfD-Stimmenanteil, {election} {year}, in %", "axis_rate_pair": "{measure} je 100.000 Einwohner, {year}",
         "hover_afd": "AfD-Anteil", "second_votes": " Bundestagswahl: Zweitstimmen.",
